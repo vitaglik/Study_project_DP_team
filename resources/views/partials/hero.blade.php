@@ -13,7 +13,7 @@
                 {{--end--}}
             <div class="hero-facts">
 {{--                hero_facts start + добавь альты--}}
-                {!! $hero->hero_facts !!}
+                {!! $hero?->hero_facts !!}
                 {{--end--}}
             </div>
 {{--            hero_actions start--}}

@@ -35,11 +35,14 @@
 
     <section id="learning" class="section compact">
         <div class="page learning-frame">
-
+            <div class="training-layout">
             @include('partials/course')
 
-            @include('partials/faq')
+                @include('partials/course-form')
 
+
+            </div>
+            @include('partials/faq')
         </div>
     </section>
 </main>

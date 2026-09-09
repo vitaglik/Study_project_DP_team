@@ -665,7 +665,7 @@ textarea {
     font-size: 6px;
     line-height: 1.55;
 }
-.work-card-mob-app {
+.work-card-app {
     width: 100px;
 }
 
@@ -827,7 +827,6 @@ textarea {
     background-size: cover; /* Растягивает фото на весь круг без искажений */
     background-position: center; /* Центрирует лицо внутри круга */
     background-repeat: no-repeat;
-    background-image: url("../img/teacher-image.png");
     /*background: radial-gradient(circle, #20242a, #080a0c 70%);*/
 
     border: 1px dashed #6d747e;
@@ -896,31 +895,9 @@ textarea {
     width: 35px;
     height: 35px;
     filter: drop-shadow(0 0 8px rgba(255, 50, 38, 0.8));
-}
-
-.format-image-slot.group-image {
     background-size: cover; /* Растягивает фото на весь круг без искажений */
     background-position: center; /* Центрирует лицо внутри круга */
     background-repeat: no-repeat;
-    background-image: url("../img/group-image.png");
-}
-.format-image-slot.camera-image {
-    background-size: cover; /* Растягивает фото на весь круг без искажений */
-    background-position: center; /* Центрирует лицо внутри круга */
-    background-repeat: no-repeat;
-    background-image: url("../img/camera-image.png");
-}
-.format-image-slot.calendar-image {
-    background-size: cover; /* Растягивает фото на весь круг без искажений */
-    background-position: center; /* Центрирует лицо внутри круга */
-    background-repeat: no-repeat;
-    background-image: url("../img/calendar-image.png");
-}
-.format-image-slot.location-image {
-    background-size: cover; /* Растягивает фото на весь круг без искажений */
-    background-position: center; /* Центрирует лицо внутри круга */
-    background-repeat: no-repeat;
-    background-image: url("../img/locate-image.png");
 }
 
 .format-item b,
@@ -949,7 +926,6 @@ textarea {
     height: 100px;
     display: grid;
     place-items: center;
-    background-image: url(../img/map.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -984,25 +960,11 @@ textarea {
 
     border: 1px solid #526275;
     border-radius: 50%;
-}
-.review-photo-slot.first-user {
     background-size: cover; /* Растягивает фото на весь круг без искажений */
     background-position: center; /* Центрирует лицо внутри круга */
     background-repeat: no-repeat;
-    background-image: url("../img/first-user-image.png");
 }
-.review-photo-slot.second-user {
-        background-size: cover; /* Растягивает фото на весь круг без искажений */
-        background-position: center; /* Центрирует лицо внутри круга */
-        background-repeat: no-repeat;
-        background-image: url("../img/second-user-image.png");
-}
-.review-photo-slot.third-user {
-        background-size: cover; /* Растягивает фото на весь круг без искажений */
-        background-position: center; /* Центрирует лицо внутри круга */
-        background-repeat: no-repeat;
-        background-image: url("../img/third-user-image.png");
-}
+
 
 .review-head {
     display: flex;
@@ -2090,7 +2052,7 @@ textarea {
 }
 
 /* Keep screenshots in their natural proportions without cropping. */
-.work-card-mob-app {
+.work-card-app {
     --work-card-width: 17%;
 }
 
@@ -2149,7 +2111,7 @@ textarea {
         right: 8px;
     }
 
-    .works-slider .work-card-mob-app,
+    .works-slider .work-card-app,
     .works-slider .work-card-parket-dream,
     .works-slider .work-card-summa {
         --work-card-width: 100%;

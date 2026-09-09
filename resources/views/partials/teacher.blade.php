@@ -1,16 +1,18 @@
 <article id="teacher" class="section-panel teacher-panel">
-    <h2>Про викладача</h2>
+    @foreach( $teacher as $item)
+        <h2>{!! $item->title !!}</h2>
 
-    <div class="teacher-body">
-        <div class="teacher-photo-slot">
+        <div class="teacher-body">
+            <div class="teacher-photo-slot " style="background-image: url('{!! $item->image !!}');">
 
+            </div>
+
+            <ul class="teacher-list">
+                @foreach($item->items as $row)
+                    <li>{!! $row->teacher_experience !!}</li>
+                @endforeach
+            </ul>
         </div>
+    @endforeach
 
-        <ul class="teacher-list">
-            <li>Full-Stack розробник з досвідом більше 16 років</li>
-            <li>Працював над комерційними проєктами різної складності</li>
-            <li>Допоміг десяткам студентів опанувати професію розробника</li>
-            <li>Постійно розвиваюсь і ділюсь актуальними знаннями</li>
-        </ul>
-    </div>
 </article>

@@ -1,47 +1,33 @@
-<!-- FAQ В ТОМ ЖЕ FRAME -->
 <div id="faq" class="faq-area">
 
-    <h2>FAQ</h2>
+    @foreach($faq_sections as $section)
 
-    <div class="faq-grid">
+        <h2>{{ $section->title }}</h2>
 
-        <article>
-            <span class="faq-number">01</span>
+        <div class="faq-grid">
 
-            <div>
-                <h3>Чи підійде навчання з нуля?</h3>
-                <p>
-                    Так. Курс розрахований на тих, хто тільки починає
-                    знайомство з веб-розробкою.
-                </p>
-            </div>
-        </article>
+            @foreach($section->items as $item)
 
+                <article>
 
-        <article>
-            <span class="faq-number">02</span>
+                    <span class="faq-number">
+                        {{ str_pad($loop->iteration, 2, '0', STR_PAD_LEFT) }}
+                    </span>
 
-            <div>
-                <h3>Як проходять заняття?</h3>
-                <p>
-                    Онлайн у живому спілкуванні з викладачем:
-                    теорія, практика, домашні завдання та тестування.
-                </p>
-            </div>
-        </article>
+                    <div>
+                        <h3>{{ $item->question }}</h3>
 
+                        <p>
+                            {{ $item->answer }}
+                        </p>
+                    </div>
 
-        <article>
-            <span class="faq-number">03</span>
+                </article>
 
-            <div>
-                <h3>Скільки триває курс?</h3>
-                <p>
-                    Загальна програма навчання розрахована на 30 годин.
-                </p>
-            </div>
-        </article>
+            @endforeach
 
-    </div>
+        </div>
+
+    @endforeach
 
 </div>
