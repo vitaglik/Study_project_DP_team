@@ -4,10 +4,9 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Technologies extends Model
+class Reviews extends Model
 {
-    protected $table = 'technologies';
+    protected $table = 'reviews';
 
     public $timestamps = false;
-
 }

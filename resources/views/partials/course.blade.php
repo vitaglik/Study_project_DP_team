@@ -1,91 +1,37 @@
 <!-- ФОРМАТ НАВЧАННЯ -->
 <article class="training-panel" id="training-panel">
-@foreach($course_sections as $section)
-        <div class="training-heading">
-            <div>
-                <span class="section-kicker">{!! $section->course_format !!}</span>
-                <h2>{!! $section->title !!}</h2>
-            </div>
+        {!! $course->kicker !!}
+    <div class="training-heading">
+        <div>
 
-            <div class="training-hours">
-                <strong>{!! $section->course_duration !!}</strong><span>годин</span>
-            </div>
+            {!! $course->title !!}
         </div>
 
-        <p class="training-intro">
-            {!! $section->subtitle !!}
-        </p>
+        <div class="training-hours">
+{{--            придумать как сделать--}}
+            <strong>30</strong><span>годин</span>
+        </div>
+    </div>
+{{--сделать столбик с subtitle--}}
+    <p class="training-intro">
+        Курс для тих, хто хоче з нуля вивчити основи веб-розробки
+        та навчитися створювати сучасні веб-сайти.
+    </p>
 
 
-        @foreach($section->about as $about)
-
-            <div class="training-block">
-
-                <h3>{{ $about->title }}</h3>
-
-                @if($about->type === 'skills')
-
-                    <div class="learning-list">
-
-                        @foreach($about->items as $item)
-
-                            <div class="learning-item">
-                                <span class="learning-check">✓</span>
-
-                                <div>
-                                    <strong>{{ $item->item_title }}</strong>
-                                    <p>{{ $item->item_subtitle }}</p>
-                                </div>
-                            </div>
-
-                        @endforeach
-
-                    </div>
-
-                @elseif($about->type === 'process')
-
-                    <div class="format-grid">
-
-                        @foreach($about->items as $item)
-
-                            <div class="format-card">
-
-                        <span class="format-number">
-                            {{ str_pad($loop->iteration, 2, '0', STR_PAD_LEFT) }}
-                        </span>
-
-                                <div>
-                                    <strong>{{ $item->item_title }}</strong>
-                                    <p>{{ $item->item_subtitle }}</p>
-                                </div>
-
-                            </div>
-
-                        @endforeach
-
-                    </div>
-
-                @endif
-
-            </div>
-
-        @endforeach
+    {!! $course->course_description !!}
 
 
-        <div class="training-bottom">
+    <div class="training-bottom">
 
-            <div class="training-duration">
-                <span>Тривалість курсу</span>
-                <strong>{!! $section->course_duration !!} годин</strong>
-            </div>
-
-            <a href="#apply" class="training-button">
-                {!! $section->course_action !!}
-            </a>
-
+        <div class="training-duration">
+            <span>Тривалість курсу</span>
+            <strong>30 годин</strong>
         </div>
 
-    @endforeach
+        {!! $course->action !!}
+
+    </div>
 
 </article>
 

@@ -11,6 +11,6 @@ class WorksSections extends Model
     public $timestamps = false;
 
     public function items() {
-        return $this->hasMany(WorksSectionItems::class, 'section_id')->orderBy('sort_order');
+        return $this->hasMany(WorksSectionItems::class, 'section_id')->orderBy('id');
     }
 }

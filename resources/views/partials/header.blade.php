@@ -3,24 +3,24 @@
 
         <div class="brand logo "
              {{--         logo start  добавить в деффолт альт с название картинки--}}
-             {!! $header->logo !!}
+             style="background-image: url('../{!! $header->logo !!}')"
              {{--         end --}}
              href="#top">
         </div>
 
         <nav class="main-nav">
-{{--             menu bar start --}}
+            {{--             menu bar start --}}
             {!! $header->menu_bar !!}
-{{--             end --}}
+            {{--             end --}}
         </nav>
 
         <div class="header-contacts">
-{{--            /* contacts start */--}}
+            {{--            /* contacts start */--}}
             {!! $header->contacts !!}
-{{--            /* end */--}}
+            {{--            /* end */--}}
         </div>
-{{--        /* header action start */--}}
+        {{--        /* header action start */--}}
         {!! $header->header_action !!}
-{{--        /* end */--}}
+        {{--        /* end */--}}
     </div>
 </header>

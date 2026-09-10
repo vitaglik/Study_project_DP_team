@@ -1,21 +1,11 @@
 <article class="section-panel format-panel">
-    @foreach($learning_program as $item)
-        <h2>{!! $item->title !!}</h2>
 
-        <div class="format-list">
-            @foreach($item->items as $row)
-                <div class="format-item">
-                    <div class="format-image-slot group-image" style="background-image: url('../img/{!! $row->item_image !!}');"></div>
-                    <div>
-                        <b>{!! $row->item_title !!}</b>
-                        <span>{!! $row->item_subtitle !!}</span>
-                    </div>
-                </div>
-            @endforeach
-        </div>
+    {!! $learning_program->title !!}
 
-        <div class="map-image-slot" style="background-image: url('{!! $item->image !!}');">
-        </div>
-    @endforeach
+    <div class="format-list">
+        {!! $learning_program->format_items !!}
+    </div>
 
+    <div class="map-image-slot" style="background-image: url('../{!! $learning_program->background_image !!}')">
+    </div>
 </article>
